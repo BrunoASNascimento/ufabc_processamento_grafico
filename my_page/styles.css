@@ -1,0 +1,18 @@
+.perfil{
+    /* border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px; */
+  width: 150px;
+}
+
+div {
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+iframe.youtube {
+  
+    width: 240px;
+    height: 135px;
+  
+}
