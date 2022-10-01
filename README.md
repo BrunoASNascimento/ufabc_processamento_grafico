@@ -1,10 +1,20 @@
 # ufabc_processamento_grafico
 
 
-## Code
+## URLs:
 
+- [openglexamples](https://cs.lmu.edu/~ray/notes/openglexamples/)
+
+## Code:
+
+Compile:
 ```
 gcc -o <your_file> <your_file>.cpp -lglut -lGL -lGLU
-./<your_file>
 
+```
+
+Run:
+
+```
+./<your_file>
 ```
