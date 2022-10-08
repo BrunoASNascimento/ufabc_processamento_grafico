@@ -15,6 +15,8 @@
 
 /* The number of our GLUT window */
 int window;
+int i;
+double angle;
 
 void display(void)
 {
@@ -25,13 +27,14 @@ void display(void)
      * (0.25, 0.25, 0.0) and (0.75, 0.75, 0.0)
      */
     glColor3f(1.0, 1.0, 1.0);
-    glBegin(GL_TRIANGLES);
-    glColor3f(1.f, 0.f, 0.f);
-    glVertex3f(0.2f, 0.2f, 0.f);
-    glColor3f(0.f, 1.f, 0.f);
-    glVertex3f(0.8f, 0.2f, 0.f);
-    glColor3f(0.f, 0.f, 1.f);
-    glVertex3f(0.2f, 0.8f, 0.f);
+    GLdouble PI = 3.1415926535897;
+    GLint circle_points = 1000;
+    glBegin(GL_LINE_LOOP);
+    for (i = 0; i < circle_points; i++)
+    {
+        angle = 2 * PI * i / circle_points;
+        glVertex2f(cos(angle), sin(angle));
+    }
     glEnd();
 
     /* don't wait!
@@ -48,7 +51,7 @@ void init(void)
     /* initialize viewing values  */
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
+    glOrtho(0.0, 0.0, 0.0, 0.0, -5.0, 0.0);
 }
 
 /*
@@ -62,8 +65,8 @@ int main(int argc, char **argv)
 {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-    glutInitWindowSize(250, 250);
-    glutInitWindowPosition(100, 100);
+    glutInitWindowSize(600, 600);
+    glutInitWindowPosition(0, 0);
     glutCreateWindow("Bruno Nascimento");
     init();
     glutDisplayFunc(display);
