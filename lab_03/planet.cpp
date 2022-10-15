@@ -1,9 +1,13 @@
 #define GL_SILENCE_DEPRECATION
-#include <iostream>
 #include <stdlib.h>
 #include <math.h>
-#include <unistd.h> // needed to sleep
+/* MAC ONLY */
 #include <GLUT/glut.h> // MAC ONLY
+#include <iostream> // MAC ONLY
+/* LINUX ONLY */
+// #include <GL/gl.h> // LINUX ONLY
+// #include <GL/glu.h> // LINUX ONLY
+// #include <GL/glut.h> // LINUX ONLY
 
 /* ASCII code for the escape key. */
 #define ESCAPE 27
