@@ -26,7 +26,7 @@ void display(void)
    glColor3f(1.0, 1.0, 1.0);
 
    glPushMatrix();
-   glutWireSphere(1.0, 20, 16); /* draw sun */
+   glutSphere(1.0, 20, 16); /* draw sun */
    glRotatef((GLfloat)year, 0.0, 1.0, 0.0);
    glTranslatef(2.0, 0.0, 0.0);
    glRotatef((GLfloat)day, 0.0, 1.0, 0.0);
